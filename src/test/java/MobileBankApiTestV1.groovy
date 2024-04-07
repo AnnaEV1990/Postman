@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.given
+import static org.hamcrest.Matchers.equalTo;
 
 class MobileBankApiTestV1 {
     @Test
@@ -14,7 +15,7 @@ class MobileBankApiTestV1 {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body(/* --> ваша проверка здесь <-- */)
+                .body("data", equalTo ("some value"))
         ;
 
     }
