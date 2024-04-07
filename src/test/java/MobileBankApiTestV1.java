@@ -15,7 +15,7 @@ public class MobileBankApiTestV1 {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", Matchers.equalTo("some value"));
+                .body("data", Matchers.equalTo("some data"));
 
 
     }
